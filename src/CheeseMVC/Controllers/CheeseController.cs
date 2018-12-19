@@ -38,6 +38,7 @@ namespace CheeseMVC.Controllers
             {
                 CheeseCategory newCheeseCategory =
                     context.Categories.Single(c => c.ID == addCheeseViewModel.CategoryID);
+
                 // Add the new cheese to my existing cheeses
                 Cheese newCheese = new Cheese
                 {
@@ -59,6 +60,7 @@ namespace CheeseMVC.Controllers
         {
             ViewBag.title = "Remove Cheeses";
             ViewBag.cheeses = context.Cheeses.ToList();
+
             return View();
         }
 
